@@ -7,10 +7,11 @@ int main()
     while (1)
     {
         short int guess;
-        if (scanf("%d", &guess) != 1)
+        printf("%hd\n", guess);
+        if (scanf("%hd", &guess) != 1)
         {
             fprintf(stderr, "Type a number!\n");
-            continue;
+            return 1;
         }
         if (guess > secret_number)
             printf("It is low\n");
